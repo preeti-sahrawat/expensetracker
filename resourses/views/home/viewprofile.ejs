@@ -1,0 +1,25 @@
+<div class="container-fluid p-0">
+
+	<div class="row">
+		<div class="col-12 col-xl-10 ml-5 mt-5">
+			<div class="card">
+				<div class="card-header">
+					<h5 class="card-title">View profile</h5>
+				</div>
+				<div class="card-body">
+					<form id="updateprofile">
+						<div class="form-group">
+							<label class="form-label">Your name</label>
+							<input type="text" name="name" id="name" value="<%= userdata.name %>" class="form-control" placeholder="Enter name" required>
+						</div>
+						<div class="form-group">
+							<label class="form-label">Your email</label>
+							<input type="email" name="email" id="amount" class="form-control" value="<%= userdata.email %>" required disabled>
+						</div>
+						<button type="submit" class="btn btn-primary">Update profile</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container-fluid p-0">
+
+	<div class="row">
+		<div class="col-12 col-xl-10 ml-5 mt-5">
+			<div class="card">
+				<div class="card-header">
+					<h5 class="card-title">View profile</h5>
+				</div>
+				<div class="card-body">
+                    <form id="changepass" action="/changepass">
+                        <div class="form-group">
+							<label class="form-label">Your email</label>
+							<input type="email" name="email" id="email" class="form-control" value="<%= loginuser %>" required disabled>
+						</div>
+						<div class="form-group">
+							<label class="form-label">Enter old passowrd</label>
+							<input type="password" name="oldpass" id="oldpass"" class="form-control" placeholder="Enter old passowrd" required>
+						</div>
+						<div class="form-group">
+							<label class="form-label">Enter new passowrd</label>
+							<input type="password" name="newpass" id="newpass"" class="form-control" placeholder="Enter new passowrd" required>
+						</div>
+						<div class="form-group">
+							<label class="form-label">confirm new passowrd</label>
+							<input type="text" name="cpass" id="cpass"" class="form-control" placeholder="confirm new passowrd" required>
+						</div>
+						<button type="submit" class="btn btn-primary">change pass</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

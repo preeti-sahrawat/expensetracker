@@ -1,0 +1,90 @@
+<div class="container-fluid">
+    <h4 class="mt-4 h3">View All expences</h4>
+    <% if(expencedata.length){ %>
+        <table id="datatables-dashboard-projects" class="table mt-5 table-striped my-0 dataTable no-footer">
+            <thead>
+                <tr role="row">
+                    <th>Sno.</th>
+                    <th>Name</th>
+                    <th>email</th>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% expencedata.forEach((expencedata,i)=>{ %>
+                    <tr role="row" class="odd">
+                        <td>
+                            <%= i+1 %>
+                        </td>
+                        <td>
+                            <%= userdata.name %>
+                        </td>
+                        <td>
+                            <%= expencedata.email %>
+                        </td>
+                        <td>
+                            <%= expencedata.title %>
+                        </td>
+                        <td>
+                            <% if(expencedata.cradittype=="cradit" ){ %>
+                                <span class="badge badge-success">+ <%= expencedata.amount %></span>
+                                <% }else{ %>
+                                    <span class="badge badge-danger">- <%= expencedata.amount %></span>
+                                    <% } %>
+                        </td>
+                        <td>
+                            <%= expencedata.desc %>
+                        </td>
+                        <td>
+                          <%= new Date(expencedata.createdAt).toLocaleDateString() %>
+                        </td>
+                        <td><a href="/deleteexpense/<%= expencedata._id %>" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                    <% }) %>
+
+            </tbody>
+        </table>
+        <div class="container mt-4 pagenation">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <% if(totalpages > 0){ %>
+                        <% if(current == 1){ %>
+                            <li class="page-item dbtn disabled"><a class="page-link" href="#">First</a></li>
+                        <% }else{ %>
+                            <li><a href="/viewexpence/1">First</a></li>
+                        <% } %>
+                        <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+                        <% if (i !== 1) { %>
+                            <li class="page-item dbtn disabled"><a class="page-link" href="#">...</a></li>
+                        <% } %>
+
+                        <% for (; i <= (Number(current) + 4) && i <= totalpages; i++) { %>
+                            <% if (i == current) { %>
+                                <li class="page-item active"><a class="page-link" href="#"><%= i %></a></li>
+                            <% } else { %>
+                                <li class="page-item"><a class="page-link" href="/viewexpence/<%= i %>"><%= i %></a></li>
+
+                            <% } %>
+                            <% if (i == Number(current) + 4 && i < totalpages) { %>
+                                <li class="page-item dbtn disabled"><a class="page-link" href="#">...</a></li>
+                            <% } %>
+                        <% } %>
+                        <% if (current == totalpages) { %>
+                            <li class="page-item"><a class="page-link dbtn disabled" href="#">Last</a></li>
+                        <% } else { %>
+                            <li class="page-item"><a class="page-link" href="/viewexpence/<%= totalpages %>">Last</a></li>
+                        <% } %>
+                        
+                  <% } %>
+                </ul>
+              </nav>
+        </div>
+        <% }else{ %>
+            <h1>No expense yet</h1>
+            <% } %>
+</div>

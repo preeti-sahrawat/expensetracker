@@ -1,0 +1,241 @@
+<main>
+    <div class="content">
+        <h3 class="mt-4 h3">Total status</h3>
+        <div class="row">
+            <div class="col-12 col-md-4 col-sm-6 col-xxl d-flex">
+                <div class="card illustration flex-fill">
+                    <div class="card-body py-4">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="text-center illustration-text">Total credit</h4>
+                                <h2 class="mb-2 text-center">&#8360; <%= Exdata.totalCradit %></h2>
+                            </div>
+                            <div class="d-inline-block ml-3">
+                                <div class="stat">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-dollar-sign align-middle text-success">
+                                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-4 col-sm-6 col-xxl d-flex">
+                <div class="card illustration flex-fill">
+                    <div class="card-body py-4">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="text-center illustration-text">Total debit</h4>
+                                <h2 class="mb-2 text-center">&#8360; <%= Exdata.totalDebit %></h2>
+                            </div>
+                            <div class="d-inline-block ml-3">
+                                <div class="stat">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-dollar-sign align-middle text-success">
+                                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-sm-6 col-xxl d-flex">
+                <div class="card illustration flex-fill">
+                    <div class="card-body py-4">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="text-center illustration-text">Monthly Average Expense!</h4>
+                                <h2 class="mb-2 text-center">&#8360; <%= Exdata.lastmonthExpenseavg %></h2>
+                            </div>
+                            <div class="d-inline-block ml-3">
+                                <div class="stat">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-dollar-sign align-middle text-success">
+                                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-sm-6 col-xxl d-flex">
+                <div class="card illustration flex-fill">
+                    <div class="card-body py-4">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="text-center illustration-text">Today's Expense!</h4>
+                                <h2 class="mb-2 text-center">&#8360; <%= Exdata.todayExpense %></h2>
+                            </div>
+                            <div class="d-inline-block ml-3">
+                                <div class="stat">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-dollar-sign align-middle text-success">
+                                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-sm-6 col-xxl d-flex">
+                <div class="card illustration flex-fill">
+                    <div class="card-body py-4">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="text-center illustration-text">Yesterdays's Expense!</h4>
+                                <h2 class="mb-2 text-center">&#8360; <%= Exdata.yesterdatsExpense %></h2>
+                            </div>
+                            <div class="d-inline-block ml-3">
+                                <div class="stat">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-dollar-sign align-middle text-success">
+                                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-sm-6 col-xxl d-flex">
+                <div class="card illustration flex-fill">
+                    <div class="card-body py-4">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="text-center illustration-text">last 7day's Expense!</h4>
+                                <h2 class="mb-2 text-center">&#8360; <%= Exdata.last7Expense %></h2>
+                            </div>
+                            <div class="d-inline-block ml-3">
+                                <div class="stat">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-dollar-sign align-middle text-success">
+                                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-sm-6 col-xxl d-flex">
+                <div class="card illustration flex-fill">
+                    <div class="card-body py-4">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="text-center illustration-text">last 30 day's Expense!</h4>
+                                <h2 class="mb-2 text-center">&#8360; <%= Exdata.last30Expense %></h2>
+                            </div>
+                            <div class="d-inline-block ml-3">
+                                <div class="stat">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-dollar-sign align-middle text-success">
+                                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-sm-6 col-xxl d-flex">
+                <div class="card illustration flex-fill">
+                    <div class="card-body py-4">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="text-center illustration-text">yearly's Expense!</h4>
+                                <h2 class="mb-2 text-center">&#8360; <%= Exdata.yearly %></h2>
+                            </div>
+                            <div class="d-inline-block ml-3">
+                                <div class="stat">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-dollar-sign align-middle text-success">
+                                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-sm-6 col-xxl d-flex">
+                <div class="card illustration flex-fill">
+                    <div class="card-body py-4">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="text-center illustration-text">yearly Expense Average!</h4>
+                                <h2 class="mb-2 text-center">&#8360; <%= Exdata.lastyearExpenseavg %></h2>
+                            </div>
+                            <div class="d-inline-block ml-3">
+                                <div class="stat">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-dollar-sign align-middle text-success">
+                                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="mt-4 h3">Last 5 Record</h4>
+        <table id="datatables-dashboard-projects" class="table mt-5 table-striped my-0 dataTable no-footer">
+            <thead>
+                <tr role="row">
+                    <th>Sno.</th>
+                    <th >email</th>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(expencedata){ %>
+                <% expencedata.forEach((expencedata,i)=>{ %>
+                    <tr role="row" class="odd">
+                        <td><%= i+1 %></td>
+                        <td><%= expencedata.email %></td>
+                        <td><%= expencedata.title %></td>
+                        <td>
+                            <% if(expencedata.cradittype == "cradit"){ %>
+                                <span class="badge badge-success">+ <%= expencedata.amount %></span>
+                            <% }else{ %>
+                                <span class="badge badge-danger">- <%= expencedata.amount %></span>                              
+                            <% } %>
+                        </td>
+                        <td><%= expencedata.desc %></td>
+                        <td><%= expencedata.createdAt %></td>
+                    </tr>
+                    <% }) %>
+
+                <%  } %>
+            </tbody>
+        </table>
+    </div>
+
+</main>

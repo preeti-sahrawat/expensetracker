@@ -1,0 +1,412 @@
+<!-- // edit -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-backdrop="static"
+  data-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Edit Company</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container p-0">
+          <div class="row">
+            <div class="col-12 col-xl-10">
+              <form
+                id="editcompanyForm"
+                onsubmit="return false"
+                enctype="multipart/form-data"
+              >
+                <div class="form-group">
+                  <input
+                    type="hidden"
+                    name="ecid"
+                    id="ecid"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Enter Company name *</label>
+                  <input
+                    type="text"
+                    name="ecompanyname"
+                    id="ecompanyname"
+                    class="form-control"
+                    placeholder="Enter Company name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Enter salery*</label>
+                  <input
+                    type="number"
+                    name="esalery"
+                    id="esalery"
+                    class="form-control"
+                    placeholder="Enter salery"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Enter Joining date*</label>
+                  <input
+                    type="date"
+                    name="ejoindate"
+                    id="ejoindate"
+                    class="form-control"
+                    placeholder="Enter joining date"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Enter degination *</label>
+                  <input
+                    type="text"
+                    name="edegination"
+                    id="edegination"
+                    class="form-control"
+                    placeholder="Enter degination"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Uploads letter</label>
+                  <input
+                    type="file"
+                    name="docs"
+                    id="edocs"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Enter remark</label>
+                  <textarea
+                    class="form-control"
+                    name="eremark"
+                    id="eremark"
+                    placeholder="Enter remark"
+                    rows="3"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  id="updateCompanybtn"
+                  class="btn btn-primary"
+                  onclick="updateEditForm()"
+                >
+                  Update Company
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- add salery -->
+
+<!-- // edit -->
+<div
+  class="modal fade"
+  id="addsalerymodel"
+  data-backdrop="static"
+  data-keyboard="false"
+  tabindex="-1"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Add salery</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container p-0">
+          <div class="row">
+            <div class="col-12 col-xl-10">
+              <form
+                id="addSaleryForm"
+                onsubmit="return false"
+                enctype="multipart/form-data"
+              >
+                <div class="form-group">
+                  <input
+                    type="hidden"
+                    name="escid"
+                    id="escid"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Current salery *</label>
+                  <input
+                    type="text"
+                    name="currentsalery"
+                    id="currentsalery"
+                    class="form-control"
+                    readonly
+                    placeholder="Enter currentsalery name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Enter recived amount*</label>
+                  <input
+                    type="number"
+                    name="recivedamount"
+                    id="recivedamount"
+                    class="form-control"
+                    placeholder="Enter recived amount"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Enter deduction *</label>
+                  <input
+                    type="text"
+                    name="deduction"
+                    id="deduction"
+                    value="0"
+                    class="form-control"
+                    placeholder="Enter deduction"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Uploads letter</label>
+                  <input
+                    type="file"
+                    name="slip"
+                    id="slip"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Enter remark</label>
+                  <textarea
+                    class="form-control"
+                    name="remark"
+                    id="remark"
+                    placeholder="Enter remark"
+                    rows="3"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  id="addsaleryButtonform"
+                  class="btn btn-primary"
+                  onclick="submitAddSalery()"
+                >
+                  Add salery
+                </button>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- view salery -->
+
+<div class="modal fade" id="viewsaleriesModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">View Salery <span id="viewsalcompname">compnayname</span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="tableDataSalery">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="circle-tile ">
+                <a href="#"><div class="circle-tile-heading dark-blue"><i class="fa fa-users fa-fw fa-3x"></i></div></a>
+                <div class="circle-tile-content dark-blue">
+                  <div class="circle-tile-description text-faded">Total Amount</div>
+                  <div class="circle-tile-number text-faded "><span id="totalamt">100</span></div>
+                  <a class="circle-tile-footer" href="#">More Info<i class="fa fa-chevron-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+             
+            <div class="col-md-4 col-sm-6">
+              <div class="circle-tile ">
+                <a href="#"><div class="circle-tile-heading red"><i class="fa fa-users fa-fw fa-3x"></i></div></a>
+                <div class="circle-tile-content red">
+                  <div class="circle-tile-description text-faded">Total salery </div>
+                  <div class="circle-tile-number text-faded "><span id="nosalery">100</span></div>
+                  <a class="circle-tile-footer" href="#">More Info<i class="fa fa-chevron-circle-right"></i></a>
+                </div>
+              </div>
+            </div> 
+            
+ 
+            <div class="col-md-4 col-sm-6">
+              <div class="circle-tile ">
+                <a href="#"><div class="circle-tile-heading red"><i class="fa fa-users fa-fw fa-3x"></i></div></a>
+                <div class="circle-tile-content red">
+                  <div class="circle-tile-description text-faded">Total deduction </div>
+                  <div class="circle-tile-number text-faded "><span id="totaldedection">100</span></div>
+                  <a class="circle-tile-footer" href="#">More Info<i class="fa fa-chevron-circle-right"></i></a>
+                </div>
+              </div>
+            </div> 
+
+
+          </div> 
+        </div>  
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">current salery</th>
+              <th scope="col">recived amount</th>
+              <th scope="col">date</th>
+              <th scope="col">Remark</th>
+              <th scope="col">Slip</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbodysalery">
+                 
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- main  -->
+
+<div class="container-fluid">
+  <% if(companyData.length){ %>
+  <h4 class="mt-4 h3">View All Company</h4>
+  <table
+    id="datatables-dashboard-projects"
+    class="table mt-5 table-striped my-0 dataTable no-footer"
+  >
+    <thead>
+      <tr role="row">
+        <th>Sno.</th>
+        <th>Company name</th>
+        <th>Join data</th>
+        <th>Since</th>
+        <th>degination</th>
+        <th>letter</th>
+        <th>Salery</th>
+        <th>remark</th>
+        <th>status</th>
+        <th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% companyData.forEach((compdata,i)=>{ %>
+      <tr role="row" class="odd">
+        <td><%= i+1 %></td>
+        <td><%= compdata.companyname %></td>
+        <td><%= new Date(compdata.joindate).toLocaleDateString() %></td>
+        <td><%= new Date(compdata.joindate).getMonth() %> Months</td>
+        <td><%= compdata.degination %></td>
+        <td>
+          <% if(compdata.letter && compdata.letter != undefined) { %>
+          <span>Active</span>
+          <% } else { %>
+          <span>Not Found</span>
+          <% } %>
+        </td>
+        <td>
+          <span class="badge badge-success"><%= compdata.salery %></span>
+        </td>
+
+        <td><%= compdata.remark %></td>
+        <td>
+          <% if(compdata.isactive) { %>
+          <span>Active</span>
+          <% } else { %>
+          <span>Leave</span>
+          <% } %>
+        </td>
+        <td>
+          <a
+          href="#"
+          class="btn btn-sm btn-primary"
+          data-toggle="modal"
+          data-target="#viewsaleriesModal"
+          onclick='viewSaleryFunction("<%= compdata._id %>")'
+          >View Salery</a
+        >
+          <a
+            href="/deletecompany/<%= compdata._id %>"
+            class="btn btn-sm btn-danger"
+            >Delete</a
+          >
+          <a
+            href="#"
+            id="editCompany"
+            data-toggle="modal"
+            class="btn btn-sm btn-success"
+            data-target="#staticBackdrop"
+            onclick='editCompany("<%= compdata._id %>")'
+            >Edit</a
+          >
+          <a
+            href="#"
+            id="editCompany"
+            data-toggle="modal"
+            data-target="#addsalerymodel"
+            class="btn btn-sm btn-secondary"
+            onclick='AddSaleryButton("<%= compdata._id %>","<%= compdata.salery %>")'
+            >Add salery</a
+          >
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <% }else{ %>
+  <h1>No Company found</h1>
+  <% } %>
+</div>

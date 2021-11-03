@@ -1,0 +1,38 @@
+<div class="container-fluid p-0">
+
+	<div class="row">
+		<div class="col-12 col-xl-10 ml-5 mt-5">
+			<div class="card">
+				<div class="card-header">
+					<h5 class="card-title">Add Expence</h5>
+					<!-- <h6 class="card-subtitle text-muted">.</h6> -->
+				</div>
+				<div class="card-body">
+					<form id="addexpense" action="/api/addexpense">
+						<div class="form-group">
+							<label class="form-label">Enter Title</label>
+							<input type="text" name="title" id="title" class="form-control" placeholder="Enter title" required>
+						</div>
+						<div class="form-group">
+							<label class="form-label">Enter amount</label>
+							<input type="number" name="amount" id="amount" class="form-control" placeholder="Enter amount" required>
+						</div>
+						<div class="form-group">
+							<label class="form-label w-100">Select Type</label>
+							<select name="cradittype" class="form-control" id="cradittype" required>
+								<option value="" selected disabled>---------------- Selected Type-----------------</option>
+								<option value="cradit">credit</option>
+								<option value="debit">debit</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="form-label">Enter Description</label>
+							<textarea class="form-control" name="desc" id="desc" placeholder="Enter Description" rows="5" required></textarea>
+						</div>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
